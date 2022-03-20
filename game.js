@@ -77,11 +77,17 @@ function nextSequence() {
   }
 }
 
+// function animatePress(currentColor) {
+//   
+//   
+//     
+
 function animatePress(currentColor) {
-  $("#" + currentColor).addClass("pressed");
-  setTimeout(function () {
-    $("#" + currentColor).removeClass("pressed");
-  }, 100);
+    $("#" + currentColor).addClass("pressed"+currentColor);
+
+    setTimeout(function () {
+      $("#" + currentColor).removeClass("pressed"+currentColor);
+      }, 100);
 }
 
 function playSound(name) {

@@ -47,7 +47,20 @@ body {
   background-color: rgb(102, 102, 27);
 }
 
-.pressed {
-  box-shadow: 0 0 20px rgb(190, 177, 177);
-  background-color: rgb(173, 165, 165);
+.pressedred {
+  box-shadow: 0 0 20px rgb(255, 128, 128);
+  background-color: rgb(245, 38, 38);
+}
+
+.pressedgreen {
+  box-shadow: 0 0 20px rgb(128, 255, 134);
+  background-color: rgb(26, 247, 55);
+}
+.pressedyellow {
+  box-shadow: 0 0 20px rgb(255, 224, 124);
+  background-color: rgb(255, 217, 0);
+}
+.pressedblue {
+  box-shadow: 0 0 20px rgb(112, 198, 255);
+  background-color: rgb(49, 145, 255);
 }
