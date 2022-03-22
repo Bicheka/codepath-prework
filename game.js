@@ -1,5 +1,5 @@
 
-var buttonColours = ["red", "blue", "green", "yellow"];
+var buttonColours = ["red", "blue", "green", "yellow","cyan","fuchsia","blueviolet","chartreuse","orangered"];
 
 var gamePattern = [];
 var userClickedPattern = [];
@@ -73,7 +73,7 @@ function nextSequence() {
   userClickedPattern = [];
   level++;
   $("#level-title").text("Level " + level);
-  var randomNumber = Math.floor(Math.random() * 4);
+  var randomNumber = Math.floor(Math.random() * 9);
   var randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
 
@@ -81,7 +81,7 @@ function nextSequence() {
     setTimeout(function () {
       $("#" + gamePattern[i]).fadeIn(100).fadeOut(100).fadeIn(100);
       playSound(gamePattern[i]);
-    }, (1000-(level*100)) * i);
+    }, (1000-(level*50)) * i);
   }
 }
    
