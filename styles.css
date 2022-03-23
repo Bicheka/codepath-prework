@@ -10,9 +10,9 @@ body {
   color: #FEF2BF;
 }
 
-#start
-{
+#start{
   background-color: #6EBF8B;
+  margin-bottom: 25px;
   color: #151D3B;
   font-weight: 700;
   width: 10rem;
