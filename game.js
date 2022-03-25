@@ -2,7 +2,7 @@ var buttonColours = ["red", "blue", "green", "yellow", "cyan", "fuchsia", "bluev
 
 var gamePattern = [];
 var userClickedPattern = [];
-var maxLevel = 3;
+var maxLevel = 8;
 var started = false;
 var level = 0;
 
