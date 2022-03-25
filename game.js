@@ -2,24 +2,27 @@ var buttonColours = ["red", "blue", "green", "yellow", "cyan", "fuchsia", "bluev
 
 var gamePattern = [];
 var userClickedPattern = [];
-var maxLevel = 8;
+var maxLevel = 3;
 var started = false;
 var level = 0;
 
-//
+//start-stop button
 $("#start").click(function () {
+  //start button
   if (!started) {
     $("#start").text("STOP");
     document.querySelector("#start").style.backgroundColor = "#D82148";
     $("#level-title").text("Level " + level);
     started = true;
     nextSequence();
+
+    //stop button
   } else {
     $("#start").text("START");
     playSound("wrong");
     $("body").addClass("game-over");
     document.querySelector("#start").style.backgroundColor = "#6EBF8B";
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over, Press Start to Restart");
 
     setTimeout(function () {
       $("body").removeClass("game-over");
@@ -49,21 +52,31 @@ function checkAnswer(currentLevel) {
     // if the user enter correctly the entire pattern then the user wins
     if (userClickedPattern.length === maxLevel) {
 
+      playSound("win");
       $("#start").text("START");
       document.querySelector("#start").style.backgroundColor = "#6EBF8B";
       $("#level-title").text("You won!!!, Press Start to Restart");
+      $("body").addClass("win");
+
+      setTimeout(function () {
+        $("body").removeClass("win");
+      }, 500);
+
       startOver();
 
 
-      //if the user has not completed the pattern yet start another sequence
-    }else if (userClickedPattern.length === gamePattern.length) {
+     
+    }
+     //if the user has not completed the pattern yet start another sequence
+    else if (userClickedPattern.length === gamePattern.length) {
       setTimeout(function () {
         nextSequence();
       }, 1000);
     }
 
   // if the user enters the wrong pattern, the user looses
-  } else {
+  } 
+  else {
     playSound("wrong");
     $("body").addClass("game-over");
     $("#start").text("START");
@@ -77,7 +90,7 @@ function checkAnswer(currentLevel) {
     startOver();
   }
 }
-
+//makes the pattern and each time is called add a new clue
 function nextSequence() {
   userClickedPattern = [];
   level++;
@@ -99,8 +112,6 @@ function nextSequence() {
       playSound(gamePattern[i]);
     }, (1000 - (level * 50)) * i);
   }
-  
-
 }
 
 function animatePress(currentColor) {
@@ -111,6 +122,7 @@ function animatePress(currentColor) {
   }, 100);
 }
 
+//play the specified song
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();

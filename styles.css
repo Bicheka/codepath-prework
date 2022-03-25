@@ -3,14 +3,26 @@ body {
   background-color: #011F3F;
 }
 
-#level-title {
+.gameName
+{
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin:  25px;
+  color: #FEF2BF; 
+
+}
+
+#level-title {
+  
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  
   color: #FEF2BF;
 }
 
 #start{
+
+  margin: 25px auto;
   background-color: #6EBF8B;
   margin-bottom: 25px;
   color: #151D3B;
@@ -24,7 +36,7 @@ body {
 
 .container {
   display: block;
-  max-width: 700px;
+  max-width: 825px;
   margin: auto;
 
 }
@@ -34,11 +46,9 @@ body {
     margin: 25px;
     
   }
-  .container
-  {
-    max-width: 825px;
-  }
+ 
 }
+
 
 .btn {
  
@@ -49,6 +59,11 @@ body {
   border-radius: 20%;
 }
 
+.win 
+{
+  background-color: green;
+  opacity: 0.8;
+}
 .game-over {
   
   background-color: red;
