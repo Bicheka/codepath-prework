@@ -1,4 +1,6 @@
 body {
+  margin: 0;
+  height: 100%;
   text-align: center;
   background-color: #011F3F;
 }
@@ -34,22 +36,19 @@ body {
   font-family: 'Press Start 2P', cursive ;
 }
 
-.container {
-  display: block;
-  max-width: 825px;
-  margin: auto;
-
-}
-
 @media only screen and (min-width: 850px) {
   .btn {
-    margin: 25px;
-    
+    margin: 25px; 
   }
  
 }
 
-
+.container
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .btn {
  
   display: inline-block;
@@ -72,83 +71,89 @@ body {
 
 .red
 {
-  background-color: rgba(255, 0, 0, 0.548);
+  background-color: rgba(252, 53, 53, 0.548);
 }
 
 .green {
-  background-color: rgba(0, 128, 0, 0.473);
+  background-color: rgba(16, 128, 16, 0.473);
 }
 
 .blue {
-  background-color: rgba(0, 0, 255, 0.459);
+  background-color: rgba(27, 82, 235, 0.678);
 }
 
 .yellow {
-  background-color: rgba(255, 255, 0, 0.479);
+  background-color: rgba(221, 221, 52, 0.384);
 }
 
 .cyan {
-  background-color: rgba(0, 255, 255, 0.473);
+  background-color: rgba(53, 255, 255, 0.473);
 }
 
 .fuchsia {
-  background-color: rgba(255, 0, 255, 0.479);
+  background-color: rgba(255, 0, 255, 0.212);
 }
 
 .blueviolet {
-  background-color: rgba(137, 43, 226, 0.473);
+  background-color: rgba(137, 43, 226, 0.26);
 }
 
 .chartreuse {
-  background-color: rgba(128, 255, 0, 0.473);
+  background-color: rgba(128, 255, 0, 0.274);
 }
 
 .orangered {
-  background-color: rgba(255, 68, 0, 0.418);
+  background-color: rgba(255, 68, 0, 0.26);
 }
 
-.pink {
-  background-color: rgba(255, 192, 203, 0.486);
-}
 
 
 .pressedred
 {
   background-color: red;
+  box-shadow: 0 0 50px #F24A72;
 }
 
 .pressedgreen {
   background-color: green;
+  box-shadow: 0 0 50px #39ff14;
+  
 }
 
 .pressedblue {
   background-color: blue;
+  box-shadow: 0 0 50px #2FA4FF;
 }
 
 .pressedyellow {
   background-color: yellow;
+  box-shadow: 0 0 50px #FDFFA9;
+
 }
 
 .pressedcyan {
   background-color: cyan;
+  box-shadow: 0 0 50px #B8FFF9;
+
 }
 
 .pressedfuchsia {
   background-color: fuchsia;
+  box-shadow: 0 0 50px #FF8AAE;
 }
 
 .pressedblueviolet {
   background-color: blueviolet;
+  box-shadow: 0 0 50px #D18CE0;
 }
 
 .pressedchartreuse {
   background-color: chartreuse;
+  box-shadow: 0 0 50px #B6FFCE;
 }
 
 .pressedorangered {
   background-color: orangered;
-}
+  box-shadow: 0 0 50px #F0A500;
 
-.pressedpink {
-  background-color: pink;
 }
