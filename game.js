@@ -32,16 +32,28 @@ $("#start").click(function () {
   }
 });
 
-// give style and sound to the buttons when pressed
+// detects if a button is pressed
 $(".btn").click(function () {
 
-  var userChosenColour = $(this).attr("id");
-  userClickedPattern.push(userChosenColour);
+  //if button START was pressed continue with the game
+  if(started)
+  {
+    var userChosenColour = $(this).attr("id");
+    userClickedPattern.push(userChosenColour);
 
-  playSound(userChosenColour);
-  animatePress(userChosenColour);
+    playSound(userChosenColour);
+    animatePress(userChosenColour);
 
-  checkAnswer(userClickedPattern.length - 1);
+    checkAnswer(userClickedPattern.length - 1);
+  }
+  // if a button is pressed and the game has not started only show the animation
+  else
+  {
+    var userChosenColour = $(this).attr("id");
+    playSound(userChosenColour);
+    animatePress(userChosenColour);
+    startOver();
+  }
 });
 
 //checks if the user entered the correct pattern
@@ -90,6 +102,7 @@ function checkAnswer(currentLevel) {
     startOver();
   }
 }
+
 //makes the pattern and each time is called add a new clue
 function nextSequence() {
   userClickedPattern = [];
@@ -108,12 +121,13 @@ function nextSequence() {
 
   for (let i = 0; i < gamePattern.length; i++) {
     setTimeout(function () {
-      $("#" + gamePattern[i]).fadeIn(100).fadeOut(100).fadeIn(100);
+      animatePress(gamePattern[i]);
       playSound(gamePattern[i]);
-    }, (1000 - (level * 50)) * i);
+    }, (1000 - (level * 75)) * i); //speed of the sequence
   }
 }
 
+//give teh effect to the button when pressed
 function animatePress(currentColor) {
   $("#" + currentColor).addClass("pressed" + currentColor);
 
@@ -121,13 +135,12 @@ function animatePress(currentColor) {
     $("#" + currentColor).removeClass("pressed" + currentColor);
   }, 100);
 }
-
 //play the specified song
 function playSound(name) {
   var audio = new Audio("sounds/" + name + ".mp3");
   audio.play();
 }
-
+//clean the pattern up and start again
 function startOver() {
   level = 0;
   gamePattern = [];

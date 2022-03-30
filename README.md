@@ -2,9 +2,9 @@
 
 **Memory Game** is a Light & Sound Memory game to apply for CodePath's SITE Program. 
 
-Submitted by: **NAME**
+Submitted by: **David Martinez Gil**
 
-Time spent: **#** hours spent in total
+Time spent: **5** hours spent in total
 
 Link to project: (insert your link here, should start with https://glitch.com...)
 
@@ -34,8 +34,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [x] The SART/STOP button is green when it is SART and red when it is STOP
 - [x] If any button is repeated in the pattern 2 times in a row, it is less likely that it will be repeated as the next clue
-- [x] the entire page changes color to red and sound an unplecent sound when the player looses, and green with a reward song when the player wins
+- [x] The entire page changes color to red and sound an unplecent sound when the player looses, and green with a reward song when the player wins
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
@@ -66,7 +67,7 @@ If you recorded multiple GIFs for all the implemented features, you can add them
 
 ## License
 
-    Copyright [YOUR NAME]
+    Copyright [David Martinez]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
