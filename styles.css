@@ -83,7 +83,7 @@ body {
 }
 
 .yellow {
-  background-color: rgba(221, 221, 52, 0.384);
+  background-color: rgba(221, 221, 52, 0.705);
 }
 
 .cyan {
@@ -91,19 +91,19 @@ body {
 }
 
 .fuchsia {
-  background-color: rgba(255, 0, 255, 0.212);
+  background-color: rgba(235, 74, 235, 0.548);
 }
 
 .blueviolet {
-  background-color: rgba(137, 43, 226, 0.26);
+  background-color: rgba(156, 72, 235, 0.582);
 }
 
 .chartreuse {
-  background-color: rgba(128, 255, 0, 0.274);
+  background-color: rgba(128, 255, 0, 0.521);
 }
 
 .orangered {
-  background-color: rgba(255, 68, 0, 0.26);
+  background-color: rgba(255, 68, 0, 0.623);
 }
 
 
